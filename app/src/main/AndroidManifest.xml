@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sanmiao.wypread">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--配置权限，用来记录应用配置信息 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.LoginActivity"/>
+        <activity android:name=".ui.RegisterActivity"/>
+        <activity android:name=".ui.FindPasswordActivity"/>
+        <activity android:name=".ui.MoreClassActivtiy"/>
+        <activity android:name=".ui.BookListActivity"/>
+        <activity android:name=".ui.VideoListActivity"/>
+        <activity android:name=".ui.QuiteListActivity"/>
+        <activity android:name=".ui.SetActivity"/>
+        <activity android:name=".ui.ModifyPassActivity"/>
+        <activity android:name=".ui.BookDtailsActivity"/>
+        <activity android:name=".ui.QuiteDetailsActivity"/>
+        <activity android:name=".ui.VideoDetailsActivity"/>
+        <activity android:name=".ui.MyCollectionActivity"/>
+        <activity android:name=".ui.MyHistoryActivity"/>
+        <activity android:name=".ui.MyDownActivity"/>
+        <activity android:name=".ui.ThemeActivity"/>
+        <activity android:name=".ui.BookSearchActivity"/>
+        <activity android:name=".ui.VideoSearchActivity"/>
+        <activity android:name=".ui.QuiteSearchActivity"/>
+        <activity android:name=".ui.ReadBookActivity"/>
+        <activity android:name=".ui.QRCodeActivity"/>
+        <activity android:name=".ui.QuiteDownFileActivity"/>
+        <activity android:name=".ui.PDFActivity"/>
+        <activity android:name=".ui.AboutActivity"/>
+        <activity android:name=".ui.XieYiActivity"/>
+        <activity android:name=".ui.FileActivity"/>
+        <receiver android:name=".service.MonitorSysReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

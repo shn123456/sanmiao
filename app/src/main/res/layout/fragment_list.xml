@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:background="@color/write"
+        android:id="@+id/list_num"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+   <android.support.v7.widget.RecyclerView
+       android:background="@color/write"
+       android:id="@+id/list_RV"
+       android:layout_weight="1"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </android.support.v7.widget.RecyclerView>
+    <View
+        android:background="@color/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/list_bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:padding="5dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_progressBar"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/list_nowTime"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="00:00"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:paddingRight="10dp"
+                android:id="@+id/list_allTime"
+                android:gravity="center_vertical|right"
+                android:text="00:00"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <CheckBox
+                android:id="@+id/list_start"
+                android:layout_centerHorizontal="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:src="@mipmap/icon_prev"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toLeftOf="@+id/list_start"
+                android:id="@+id/list_last" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:src="@mipmap/icon_nextsong"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/list_start"
+                android:id="@+id/list_next" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+package com.sanmiao.wypread.adapter;
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.sanmiao.wypread.R;
+import com.sanmiao.wypread.bean.BookBean;
+import com.sanmiao.wypread.bean.CollectionBook;
+import com.sanmiao.wypread.utils.GlideUtil;
+import com.sanmiao.wypread.utils.MyUrl;
+import com.sanmiao.wypread.utils.SharedPreferenceUtil;
+import com.sanmiao.wypread.utils.SunStartBaseAdapter;
+import com.sanmiao.wypread.utils.ViewHolder;
+
+import java.util.List;
+
+/**
+ * 作者 Yapeng Wang
+ * 时间 2017/5/6 0006.
+ * 类说明{}
+ */
+
+public class QuiteHistoryAdapter extends SunStartBaseAdapter {
+    public QuiteHistoryAdapter(Context context, List<?> list, boolean Load) {
+        super(context, list, Load);
+    }
+
+    @Override
+    public int onCreateViewLayoutID(int viewType) {
+        return R.layout.adapter_history2;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        ImageView img=holder.getImageView(R.id.history_img);
+        TextView title=holder.getTextView(R.id.history_title);
+        TextView name=holder.getTextView(R.id.history_name);
+        ImageView quiteImg = holder.getImageView(R.id.history_QuiteImg);
+        quiteImg.setVisibility(View.VISIBLE);
+        int i= SharedPreferenceUtil.getIntData("bgcolor");
+        if(i==1){
+            quiteImg.setImageResource(R.mipmap.icon_headset_difen);
+        }else if(i==2){
+            quiteImg.setImageResource(R.mipmap.icon_headset_bohong);
+        }else if(i==3){
+            quiteImg.setImageResource(R.mipmap.icon_headset_lan);
+        }else if(i==4){
+            quiteImg.setImageResource(R.mipmap.icon_headset_caolv);
+        }else if(i==5){
+            quiteImg.setImageResource(R.mipmap.icon_headset_yanzhi);
+        }else{
+            quiteImg.setImageResource(R.mipmap.icon_headset);
+        }
+
+
+        CollectionBook bean = (CollectionBook)list.get(position);
+        if(!TextUtils.isEmpty(bean.getImgUrl()))
+            GlideUtil.ShowImage(context, MyUrl.imgUrl+bean.getImgUrl(),img);
+        else
+            img.setImageResource(R.mipmap.icon_zhanweitu2);
+
+        title.setText(bean.getName());
+        name.setText(bean.getWriter()+"  |  "+bean.getClassify());
+
+    }
+}

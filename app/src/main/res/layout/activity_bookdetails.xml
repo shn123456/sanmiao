@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/loginbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@color/write"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="105dp"
+                    android:layout_height="140dp">
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/lv3"
+                        android:orientation="horizontal"
+                        android:layout_width="106dp"
+                        android:layout_height="140dp">
+                        <View
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/shadow"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+                        <View
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/shadow2"
+                            android:layout_gravity="right"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:padding="5dp"
+                        android:id="@+id/bookDetails_img"
+                        android:scaleType="fitXY"
+                        android:layout_width="105dp"
+                        android:layout_height="140dp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/bookDetails_title"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/bookDetails_name"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:paddingTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/bookDetails_class"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/bookDetails_readNum"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/bookDetails_downNum"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/linescolor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/bookDetails_read"
+                    android:paddingLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="阅读"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/icon_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <CheckBox
+                    android:id="@+id/bookDetails_collation"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="收藏"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/bookDetails_allDown"
+                    android:gravity="center|left"
+                    android:layout_weight="1"
+                    android:text="全本下载"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/icon_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/down_View"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <ProgressBar
+                    android:padding="10dp"
+                    android:id="@+id/down_seek"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:gravity="center"
+                    android:text="0%"
+                    android:id="@+id/down_jindu"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/down_start"
+                    android:padding="10dp"
+                    android:src="@drawable/down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/down_error"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <View
+                android:background="@color/loginbg"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/write"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:text="简介:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/bookDetails_jianjie"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/bookDetails_jianjie2"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:drawablePadding="5dp"
+                    android:id="@+id/bookDetails_allJianjie"
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/upordown"
+                    android:gravity="center"
+                    android:text="点击查看更多详情"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:background="@color/loginbg"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:id="@+id/bookDeatils_lv"
+                android:background="@color/write"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:text="猜你喜欢"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookDetails_RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

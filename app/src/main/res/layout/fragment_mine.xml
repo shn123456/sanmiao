@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/loginbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/mine_name"
+        android:background="@color/basecolor"
+        android:text="授权单位名称"
+        android:padding="25dp"
+        android:textSize="25sp"
+        android:textColor="@color/write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/write"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/mine_Collection"
+            android:padding="25dp"
+            android:textSize="16sp"
+            android:gravity="center|left"
+            android:text="我的收藏"
+            android:drawableLeft="@mipmap/icon_enshrine"
+            android:drawablePadding="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@color/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/mine_History"
+            android:padding="25dp"
+            android:textSize="16sp"
+            android:gravity="center|left"
+            android:text="历史记录"
+            android:drawableLeft="@mipmap/icon_history"
+            android:drawablePadding="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@color/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/mine_down"
+            android:padding="25dp"
+            android:textSize="16sp"
+            android:gravity="center|left"
+            android:text="我的下载"
+            android:drawableLeft="@mipmap/icon_download3"
+            android:drawablePadding="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@color/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/mine_set"
+            android:padding="25dp"
+            android:textSize="16sp"
+            android:gravity="center|left"
+            android:text="设置"
+            android:drawableLeft="@mipmap/icon_set2"
+            android:drawablePadding="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

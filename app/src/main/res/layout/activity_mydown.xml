@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/write"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/down_book"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="图书"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_below="@id/down_book"
+                android:id="@+id/down_bookView"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:background="@color/basecolor"
+                android:layout_width="50dp"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/down_quite"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="听书"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/down_quiteView"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/down_quite"
+                android:background="@color/basecolor"
+                android:layout_width="50dp"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <android.support.v4.view.ViewPager
+        android:background="@color/write"
+        android:id="@+id/down_VP"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/down_ok"
+        android:textSize="16sp"
+        android:background="@color/basecolor"
+        android:textColor="@color/write"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="删    除"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

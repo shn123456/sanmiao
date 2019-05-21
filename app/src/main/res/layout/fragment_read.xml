@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/basebg" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/basecolor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textSize="14sp"
+            android:id="@+id/read_search"
+            android:textColor="@color/black"
+            android:gravity="center|left"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@mipmap/nav_search"
+            android:layout_margin="10dp"
+            android:background="@drawable/search"
+            android:padding="5dp"
+            android:hint="请输入图书名称"
+            android:textColorHint="@color/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/bookRF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/read_banner"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+            </com.bigkoo.convenientbanner.ConvenientBanner>
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:background="@color/write"
+                android:id="@+id/read_class"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"
+                android:id="@+id/read_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+
+</LinearLayout>

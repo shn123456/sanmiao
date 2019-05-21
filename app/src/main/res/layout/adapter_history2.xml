@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <View
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shadow2"
+                android:layout_gravity="right"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <ImageView
+            android:src="@mipmap/icon_faguang"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:id="@+id/history_img"
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+        <ImageView
+            android:id="@+id/history_QuiteImg"
+            android:visibility="gone"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/icon_headset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/history_VideoImg"
+            android:visibility="gone"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/icon_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/history_check"
+            android:layout_gravity="right"
+            android:src="@drawable/collection_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/history_title"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/history_name"
+        android:gravity="left"
+        android:textColor="@color/basecolor"
+        android:singleLine="true"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

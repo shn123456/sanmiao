@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/basebg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/write"
+                android:background="@color/basecolor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="首页"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginRight="20dp"
+                android:id="@+id/main_scan"
+                android:layout_gravity="center|right"
+                android:src="@mipmap/nav_richscan"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/main_RF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/mian_banner"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+            </com.bigkoo.convenientbanner.ConvenientBanner>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/write"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/basecolor"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:gravity="center|left"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/basecolor"
+                        android:text="推荐图书"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/linescolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/main_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/write"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/basecolor"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:gravity="center|left"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/basecolor"
+                        android:text="推荐听书"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/linescolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/main_quite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/write"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/basecolor"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:gravity="center|left"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/basecolor"
+                        android:text="视频推荐"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/linescolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/main_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+</LinearLayout>

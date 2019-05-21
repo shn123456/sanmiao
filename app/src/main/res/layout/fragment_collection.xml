@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lv"
+        android:background="@color/write"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/defout"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="默认"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/click"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="点击量"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/clickImg"
+                android:src="@mipmap/btn_hui"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/down_lv"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/down"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="下载量"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/downImg"
+                android:src="@mipmap/btn_hui"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/bestNew"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="最新"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <View
+        android:background="@color/linescolor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:background="@color/write"
+        android:visibility="gone"
+        android:id="@+id/TV"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/collection_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/write"
+                android:id="@+id/RV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+
+
+
+</LinearLayout>

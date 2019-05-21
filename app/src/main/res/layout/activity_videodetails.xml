@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/loginbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+            android:visibility="gone"
+            android:id="@+id/videoDetails_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </fm.jiecao.jcvideoplayer_lib.JCVideoPlayer>
+        <ImageView
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:id="@+id/videoDetails_cover"
+            android:background="@color/write"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:background="@color/write"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/videoDetails_class"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <CheckBox
+            android:layout_marginRight="10dp"
+            android:id="@+id/videoDetails_collection"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/write"
+        android:gravity="center_vertical"
+        android:id="@+id/videoDetails_readNum"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/videoDetails_jianjie"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="简介"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/videoDetails_jianjieView"
+                android:layout_below="@+id/videoDetails_jianjie"
+                android:background="@color/basecolor"
+                android:layout_width="50dp"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/videoDetails_list"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="列表"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/videoDetails_listView"
+                android:layout_below="@+id/videoDetails_list"
+                android:background="@color/basecolor"
+                android:layout_width="50dp"
+                android:layout_height="2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/linescolor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/videoDetails_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
